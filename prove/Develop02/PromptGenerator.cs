@@ -21,7 +21,7 @@ public class PromptGenerator
     _promptList.Add("What do I want to remember from today five years from now?");
     }
 
-    // A method that displays the person's job information
+    // A method that provides a random journal prompt
     public string GetRandomPrompt()
     {
         int randomIndex = _random.Next(0, _promptList.Count);
