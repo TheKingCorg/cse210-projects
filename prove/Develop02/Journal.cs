@@ -41,6 +41,10 @@ public class Journal
     //Displays all journal entries
     public void DisplayAll()
     {
+        foreach(Entry item in _entryList)
+        {
+            item.EntryDisplay();
+        }
     }
 
     //Saves current journal to a file
