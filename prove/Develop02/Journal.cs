@@ -51,8 +51,18 @@ public class Journal
     //Saves current journal to a file
     public void SaveToFile()
     {
+        //Gather source file from user
         Console.Write("Enter the name of the file where your journal is kept: ");
         string fileSource = Console.ReadLine();
+
+        using (StreamWriter outputFile = new StreamWriter(fileSource))
+        {
+            foreach (Entry singleEntry in _entryList)
+            {
+                // Hopefully writes the whole entry as one line.
+                outputFile.WriteLine(singleEntry);                
+            }
+        }
     }
 
     //Loads journal from a provided file
