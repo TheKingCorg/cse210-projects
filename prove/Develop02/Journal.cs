@@ -1,5 +1,6 @@
 //Logs journal entries
 using System.Security.Cryptography.X509Certificates;
+using System.IO;
 
 public class Journal
 {
@@ -50,10 +51,16 @@ public class Journal
     //Saves current journal to a file
     public void SaveToFile()
     {
+        Console.Write("Enter the name of the file where your journal is kept: ");
+        string fileSource = Console.ReadLine();
     }
 
     //Loads journal from a provided file
     public void LoadFromFile()
     {
+        //Get source file from user
+        Console.Write("Enter the name of the file where your journal is kept: ");
+        string fileSource = Console.ReadLine();
+        string[] lines = System.IO.File.ReadAllLines(fileSource); //Turns fileSource into an array of each line in the file
     }
 }
