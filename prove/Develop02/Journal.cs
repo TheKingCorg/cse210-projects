@@ -68,9 +68,25 @@ public class Journal
     //Loads journal from a provided file
     public void LoadFromFile()
     {
+        //Clear entryList
+        _entryList = [];
+
         //Get source file from user
         Console.Write("Enter the name of the file where your journal is kept: ");
         string fileSource = Console.ReadLine();
         string[] lines = System.IO.File.ReadAllLines(fileSource); //Turns fileSource into an array of each line in the file
+
+        foreach (string soloLine in lines)
+        {
+            //an entry to be loaded into journal
+            Entry loadEntry = new Entry();
+
+            //Divide line and assign it to parts of loadEntry
+            string[] split = soloLine.Split(',');
+            loadEntry._date = split[0];
+            loadEntry._promptText = split[1];
+            loadEntry._entryText = split[2];
+            _entryList.Add(loadEntry);
+        }
     }
 }
