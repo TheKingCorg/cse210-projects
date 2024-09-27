@@ -60,7 +60,7 @@ public class Journal
             foreach (Entry singleEntry in _entryList)
             {
                 // Hopefully writes the whole entry as one line.
-                outputFile.WriteLine(singleEntry);                
+                outputFile.WriteLine($"{singleEntry._date},{singleEntry._promptText},{singleEntry._entryText}");
             }
         }
     }

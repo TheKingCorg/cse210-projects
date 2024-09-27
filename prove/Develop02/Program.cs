@@ -6,5 +6,10 @@ class Program
     {
         Journal currJournal = new Journal();
         currJournal.AddEntry();
+        currJournal.AddEntry();
+        currJournal.AddEntry();
+        currJournal.AddEntry();
+        currJournal.AddEntry();
+        currJournal.SaveToFile();
     }
 }
