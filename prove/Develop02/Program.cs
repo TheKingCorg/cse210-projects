@@ -4,12 +4,13 @@ class Program
 {
     static void Main(string[] args)
     {
+        //Open Menu class for use of PrintMenu method
+        Menu menu = new Menu();
+        Journal activeJournal = new Journal(); //Open a usable journal class
+        
         bool running = true;
         while (running)
         {
-            //Open Menu class for use of PrintMenu method
-            Menu menu = new Menu();
-            Journal activeJournal = new Journal(); //Open a usable journal class
 
             //Displays menu and asks for input
             menu.PrintMenu();
