@@ -1,16 +1,27 @@
 public class Scripture
 {
     //Member variables
-    private int _top;
+    private Reference _reference;
+    private List<Word> _words;
 
     //Constructors
-    public Scripture()
+    public Scripture(Reference Reference, string text)
     {
+        _reference = Reference;
+        _words = [];
     }
 
     //Methods
-    public int GetTop() //returns the value of a stored fraction's numerator
+    public void HideRandomWords(int numberToHide) //returns the value of a stored fraction's numerator
     {
-        return _top;
+
+    }
+    public string GetDisplayText()
+    { 
+        return "";
+    }
+    public bool IsCompletelyHidden()
+    {
+        return true;
     }
 }
