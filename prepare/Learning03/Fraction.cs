@@ -5,6 +5,7 @@ public class Fraction
     private int _top;
     private int _bottom;
 
+
     //Constructors
     public Fraction()
     {
@@ -25,9 +26,30 @@ public class Fraction
         _bottom = bottom;
     }
 
-    // A method that displays the person's job information
-    public void ResDisplay()
-    {
 
+    //Methods
+    public int GetTop() //returns the value of a stored fraction's numerator
+    {
+        return _top;
+    }
+    public void SetTop(int top) //Sets the stored fraction's numerator
+    {
+        _top = top;
+    }
+    public int GetBottom() //returns the value of a stored fraction's denominator
+    {
+        return _bottom;
+    }
+    public void SetBottom(int bottom) //sets the stored fraction's numerator
+    {
+        _bottom = bottom;
+    }
+    public string GetFractionString () //returns the fraction as a x/y string
+    {
+        return (_top + "/" + _bottom);
+    }
+    public double GetDecimalValue() //returns the fraction as a decimal
+    {
+        return (_top / _bottom);
     }
 }
