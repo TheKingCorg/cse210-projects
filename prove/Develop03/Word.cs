@@ -1,16 +1,28 @@
 public class Word
 {
     //Member variables
-    private int _top;
+    private string _text;
+    private bool _isHidden;
 
     //Constructors
-    public Word()
+    public Word(string text)
     {
     }
 
     //Methods
-    public int GetTop() //returns the value of a stored fraction's numerator
+    public void Hide() //returns the value of a stored fraction's numerator
     {
-        return _top;
+    }
+    public void Show()
+    {
+
+    }
+    public bool IsHidden()
+    {
+        return true;
+    }
+    public string GetDisplayText()
+    {
+        return "";
     }
 }
