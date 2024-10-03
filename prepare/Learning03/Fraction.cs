@@ -50,7 +50,7 @@ public class Fraction
     }
     public double GetDecimalValue() //returns the fraction as a decimal
     {
-        double var = (_top / _bottom);
+        double var = ((double)_top / _bottom);
         return var;
     }
 }
