@@ -7,6 +7,8 @@ public class Word
     //Constructors
     public Word(string text)
     {
+        _text = text;
+        _isHidden = false;
     }
 
     //Methods
