@@ -11,8 +11,21 @@ class Program
         Reference targRef = new Reference("Romans", 8, 16, 17);     //Build the reference
         Scripture targScrip = new Scripture(targRef, scripText);    //build the scripture class
 
-        do 
+        Console.Clear(); //Start each loop with a clear console
+        Console.WriteLine(targScrip.GetDisplayText()); //Use the scripture class's GetDisplayText method to show the scripture
+        Console.Write("\nHit enter to continue or type 'quit' to quit.\n>"); //prompt user input
+        userEntry = Console.ReadLine();
+
+        //update quit
+        if (userEntry == "quit")
         {
+            quit = true;
+        }
+        
+        while (!quit && !targScrip.IsCompletelyHidden()) //conditions to keep looping
+        {
+            targScrip.HideRandomWords(3);
+
             Console.Clear(); //Start each loop with a clear console
             Console.WriteLine(targScrip.GetDisplayText()); //Use the scripture class's GetDisplayText method to show the scripture
             Console.Write("\nHit enter to continue or type 'quit' to quit.\n>"); //prompt user input
@@ -23,10 +36,6 @@ class Program
             {
                 quit = true;
             }
-
-            targScrip.HideRandomWords(3);
-
-        } while (!quit && !targScrip.IsCompletelyHidden()); //conditions to keep looping
-
+        } 
     }
 }

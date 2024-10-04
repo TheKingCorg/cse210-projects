@@ -29,7 +29,7 @@ public class Scripture
         int failedHideAttempts = 0;
         for (int i = 0; i<numberToHide; i++)   //This loop will find 3 unhidden words to hide
         {
-            int randIndex = random.Next(scriptLength + 1); //pick a random word from the list
+            int randIndex = random.Next(scriptLength); //pick a random word from the list
             if (_words[randIndex].IsHidden()) //check if it's hidden
             { 
                 i -= 1; //if it is, decrement i so you'll loop through again
@@ -41,7 +41,7 @@ public class Scripture
             }
 
             //break the loop if it can't find any more words to hide, this stops an infinite loop
-            if (failedHideAttempts == 100)
+            if (failedHideAttempts == 1000)
             {
                 _completelyHidden = true;
                 break;
@@ -53,7 +53,7 @@ public class Scripture
     { 
         int wordCount = 0; //for use in tracking word count to start a new line
         string newLine = "\n";
-        string displayText = ($"{_reference.GetDisplayText()} ");
+        string displayText = ($"{_reference.GetDisplayText()}");
         foreach (Word indWord in _words)
         {
             string wordText = indWord.GetDisplayText();
