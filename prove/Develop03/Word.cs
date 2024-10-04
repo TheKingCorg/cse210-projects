@@ -28,7 +28,7 @@ public class Word
     {
         if (_isHidden)
         {
-            int length = _text.Length;
+            int length = _text.Length; //return only blanks if the Word is hidden
             return new string('_', length);
         }
         else
