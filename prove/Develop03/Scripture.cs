@@ -10,6 +10,7 @@ public class Scripture
     //Constructors
     public Scripture(Reference Reference, string text)
     {
+        _completelyHidden = false;
         _reference = Reference;
         _words = [];
         List<string> splitText = text.Split(' ').ToList(); //turns the full text into a list of individual single-word strings
