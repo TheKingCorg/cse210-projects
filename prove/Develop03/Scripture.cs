@@ -59,9 +59,9 @@ public class Scripture
             string wordText = indWord.GetDisplayText();
             displayText += wordText; //add the new word or blank onto the text string
             wordCount += 1;
-            
+
             //add a new line after every seven words
-            if (wordCount % 7 == 0)
+            if (wordCount % 12 == 0)
             {
                 displayText += newLine;
             }
