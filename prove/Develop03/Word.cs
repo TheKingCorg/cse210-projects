@@ -33,7 +33,7 @@ public class Word
         }
         else
         {
-            return ($"{_text} "); //return the text of the Word Class
+            return ($"{_text}"); //return the text of the Word Class
         }
     }
 }

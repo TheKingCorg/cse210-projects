@@ -53,11 +53,11 @@ public class Scripture
     { 
         int wordCount = 0; //for use in tracking word count to start a new line
         string newLine = "\n";
-        string displayText = ($"{_reference}");
+        string displayText = ($"{_reference.GetDisplayText()} ");
         foreach (Word indWord in _words)
         {
             string wordText = indWord.GetDisplayText();
-            displayText += wordText; //add the new word or blank onto the text string
+            displayText += (wordText + " "); //add the new word or blank onto the text string
             wordCount += 1;
 
             //add a new line after every seven words
