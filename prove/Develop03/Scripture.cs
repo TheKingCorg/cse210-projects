@@ -1,8 +1,11 @@
+using System.ComponentModel.DataAnnotations;
+
 public class Scripture
 {
     //Member variables
     private Reference _reference;
     private List<Word> _words;
+    private bool completelyHidden;
 
     //Constructors
     public Scripture(Reference Reference, string text)
@@ -22,7 +25,6 @@ public class Scripture
     {
         Random random = new Random(); //random for use in hiding random words
         int scriptLength = _words.Count; //The word count of whatever scripture is stored in the class
-        List<int> indexToHide = [];
         for (int i = 0; i<numberToHide; i++)   //This loop will find 3 unhidden words to hide
         {
             int randIndex = random.Next(scriptLength + 1); //pick a random word from the list
@@ -37,9 +39,15 @@ public class Scripture
         }
 
     }
-    public string GetDisplayText()
+    public string GetDisplayText() //Returns the string to be printed, including blank spaces
     { 
-        return "";
+        string displayText = ($"{_reference}");
+        foreach (Word indWord in _words)
+        {
+            string wordText = indWord.GetDisplayText();
+            displayText += wordText; //add the new word or blank onto the text string
+        }
+        return displayText;
     }
     public bool IsCompletelyHidden()
     {
