@@ -5,14 +5,15 @@ public class Customer
     private Address _address;
 
     //Constructors
-    public Customer()
+    public Customer(string name, Address addy)
     {
-
+        _name = name;
+        _address = addy;
     }
 
     //Methods
     public bool ReturnUSResident()
     {
-        return true;
+        return _address.GetInUS();
     }
 }
