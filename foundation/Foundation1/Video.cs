@@ -36,7 +36,7 @@ public class Video
     public void ShowVideoDetails()
     {
         string divider = ($"------------------------------------------------------------------");
-        Console.WriteLine($"\n{_title}\nBy {_author}\nLength: {_length}\nComments: {GetCommentNumber()}\n");
+        Console.WriteLine($"\n{_title}\nBy {_author}\nLength: {_length}\nComments: {GetCommentNumber()}\n{divider}");
     }
     public int GetCommentNumber()
     {

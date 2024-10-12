@@ -6,8 +6,8 @@ class Program
     {
         //Clear console and set output settings
         Console.Clear();
-        Console.BackgroundColor = ConsoleColor.White;
-        Console.ForegroundColor = ConsoleColor.Black;
+        Console.BackgroundColor = ConsoleColor.Black;
+        Console.ForegroundColor = ConsoleColor.White;
 
         //Open an empty list of vieos
         List<Video> allVids = new List<Video>();
@@ -17,11 +17,11 @@ class Program
         vid1.AddComment("Ben P.","Great video man!");
         vid1.AddComment("Steven H.","I think you skipped 894...");
         vid1.AddComment("Sarah M.","More videos with Carl pls!");
+        vid1.AddComment("Marty O.","Love your content");
         allVids.Add(vid1);
 
         Video vid2 = new Video("Corg&Co","Learning Klingon W/LMadge!","23:54");
         vid2.AddComment("Willem D.","Interesting stuff here.");
-        vid2.AddComment("Marty O.","Love your content");
         vid2.AddComment("Rosie O.","You two are so cute!");
         allVids.Add(vid2);
 
@@ -41,6 +41,7 @@ class Program
         {
             singleVid.ShowVideoDetails();
             singleVid.ShowComments();
+            Console.WriteLine("\n");
         }
     }
 }
