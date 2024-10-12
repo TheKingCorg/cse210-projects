@@ -5,14 +5,16 @@ public class Comment
     private string _text;
 
     //Constructors
-    public Comment()
+    public Comment(string author, string text)
     {
-        
+        _name = author;
+        _text = text;
     }
 
     //Methods
     public string GetDisplayText()
     {
-        return "";
+        string displayText = ($"{_name} commented:\n{_text}");
+        return displayText;
     }
 }
