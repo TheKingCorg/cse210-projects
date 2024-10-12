@@ -7,7 +7,7 @@ public class Video
     private List<Comment> _comments = new List<Comment>();
 
     //Constructors
-    public Video(string title, string author, string length)
+    public Video(string author, string title, string length)
     {
         //Instantiate the new Video using the passed in information
         _title = title;
@@ -35,7 +35,8 @@ public class Video
 
     public void ShowVideoDetails()
     {
-        Console.WriteLine($"{_title}\nBy {_author}\nLength: {_length}\nComments: {GetCommentNumber()}\n");
+        string divider = ($"------------------------------------------------------------------");
+        Console.WriteLine($"\n{_title}\nBy {_author}\nLength: {_length}\nComments: {GetCommentNumber()}\n");
     }
     public int GetCommentNumber()
     {
