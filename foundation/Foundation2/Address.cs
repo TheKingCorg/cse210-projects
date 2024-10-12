@@ -7,19 +7,27 @@ public class Address
     private string _country;
 
     //Constructors
-    public Address()
+    public Address(string street, string city, string state, string country)
     {
-        
+        _streetAddr = street;
+        _city = city;
+        _state = state;
+        _country = country;
     }
 
     //Methods
     public string GetDisplayText()
     {
-        string displayText = ($"");
+        string displayText = ($"{_streetAddr}\n{_city}, {_state}, {_country}");
         return displayText;
     }
     public bool GetInUS()
     {
-        return true;
+        bool inUS;
+        if (_country == "United States")
+            inUS = true;
+        else
+            inUS = false;
+        return inUS;
     }
 }
