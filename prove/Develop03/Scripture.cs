@@ -60,7 +60,7 @@ public class Scripture
             displayText += (wordText + " "); //add the new word or blank onto the text string
             wordCount += 1;
 
-            //add a new line after every seven words
+            //add a new line after every twelve words
             if (wordCount % 12 == 0)
             {
                 displayText += newLine;
