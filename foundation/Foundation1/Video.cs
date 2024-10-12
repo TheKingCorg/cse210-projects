@@ -7,9 +7,12 @@ public class Video
     private List<Comment> _comments = new List<Comment>();
 
     //Constructors
-    public Video()
+    public Video(string title, string author, string length)
     {
-        
+        _title = title;
+        _author = author;
+        _length = length;
+        _comments = [];
     }
 
     //Methods
