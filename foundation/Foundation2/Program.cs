@@ -40,6 +40,8 @@ class Program
 
         //get the packing label, the shipping label, and the total price of the order
         string spacer = "--------------------------------------------------------------------------------";
+        Console.Clear();
+        Console.WriteLine("\n\n");
         Console.WriteLine($"{order1.GetShippingLabel()}\n{spacer}\n{order1.GetPackingLabel()}\nTotal Cost: ${order1.GetTotalCost()}");
         Console.WriteLine("\n\n");
         Console.WriteLine($"{order2.GetShippingLabel()}\n{spacer}\n{order2.GetPackingLabel()}\nTotal Cost: ${order2.GetTotalCost()}");

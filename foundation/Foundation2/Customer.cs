@@ -18,7 +18,7 @@ public class Customer
     }
     public string GetAddressText()
     {
-        return ($"{_name}\n{_address.GetDisplayText}");
+        return ($"{_name}\n{_address.GetDisplayText()}");
     }
     public string GetNameText()
     {
