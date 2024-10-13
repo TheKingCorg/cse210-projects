@@ -16,4 +16,12 @@ public class Customer
     {
         return _address.GetInUS();
     }
+    public string GetAddressText()
+    {
+        return ($"{_name}\n{_address.GetDisplayText}");
+    }
+    public string GetNameText()
+    {
+        return ($"{_name}");
+    }
 }
