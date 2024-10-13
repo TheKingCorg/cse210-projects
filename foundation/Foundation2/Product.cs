@@ -23,7 +23,7 @@ public class Product
     }
     public string GetDisplayText()
     {
-        string prodInfo = ($"#{_productID} {_name} x{_quantity} @${_price}ea: ${GetCost()}");
+        string prodInfo = ($"#{_productID} {_name} x{_quantity} @${_price}ea: ${GetCost():0.00}");
         return prodInfo;
     }
 }
