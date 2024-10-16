@@ -4,11 +4,15 @@ public class WritingAssignment : Assignment
     private string _title;
 
     //Constructors
-    public WritingAssignment(){
+    public WritingAssignment(){     //Will handle no arguments
         _title = "no title";
     }
 
+    public WritingAssignment(string stuName, string topic, string title) : base(stuName,topic){
+        _title = title;
+    }
+
     public string GetWritingInformation(){
-        return "";
+        return $"{_title} by {_studentName}";
     }
 }

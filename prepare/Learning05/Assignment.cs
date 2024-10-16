@@ -1,7 +1,7 @@
 public class Assignment
 {
     //Member variables
-    private string _studentName;
+    protected string _studentName;
     private string _topic;
 
     //Constructors
