@@ -5,14 +5,19 @@ public class Assignment
     private string _topic;
 
     //Constructors
-    public Assignment(){
+    public Assignment(){            //Constructor for no arguments
         _studentName = "anon";
         _topic = "unknown";
     }
 
+    public Assignment(string stuName, string topic){    //Constructor for full arugments
+        _studentName = stuName;
+        _topic = topic;
+    }
+
     //Methods
     public string GetSummary(){
-        return "";
+        return $"Name: {_studentName}, {_topic}";
     }
 
 

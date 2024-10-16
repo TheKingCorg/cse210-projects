@@ -10,8 +10,13 @@ public class MathAssignment : Assignment
         _problems = "no problem set";
     }
 
+    public MathAssignment(string stuName, string topic, string textbookSection, string problems) : base(stuName, topic){
+        _textbookSection = textbookSection;
+        _problems = problems;
+    }
+
     //Class methods
     public string GetHomeWorkList(){
-        return "";
+        return $"{_textbookSection}\n#: {_problems}";
     }
 }
