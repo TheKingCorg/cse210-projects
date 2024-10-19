@@ -1,15 +1,15 @@
-public class BreathingActivity : Activity
-{
-    //Member variables
-    //none
+// public class BreathingActivity : Activity
+// {
+//     //Member variables
+//     //none
 
-    //Constructors
-    public BreathingActivity(){
+//     //Constructors
+//     public BreathingActivity(){
 
-    }
+//     }
 
-    //Member variables
-    public void Run(){
+//     //Member variables
+//     public void Run(){
         
-    }
-}
+//     }
+// }
