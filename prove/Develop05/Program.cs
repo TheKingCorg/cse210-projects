@@ -33,6 +33,7 @@ class Program
                     breathActivity.ShowSpinner(4);
                     Console.Clear();
                     breathActivity.DisplayEndingMessage();
+                    breathActivity.ShowSpinner(4);
                     break;
 
                 case "2":
@@ -49,6 +50,7 @@ class Program
                     reflectActivity.ShowSpinner(4);
                     Console.Clear();
                     reflectActivity.DisplayEndingMessage();
+                    reflectActivity.ShowSpinner(4);
                     break;
                     
                 case "3":
@@ -65,9 +67,14 @@ class Program
                     listActivity.ShowSpinner(4);
                     Console.Clear();
                     listActivity.DisplayEndingMessage();
+                    listActivity.ShowSpinner(4);
+                    break;
+
+                default: 
                     break;
             }
-            
+            //Wipe screen
+            Console.Clear();
         }
     }
 }
