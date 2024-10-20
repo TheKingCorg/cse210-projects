@@ -26,19 +26,31 @@ class Program
                     desiredTime = Console.ReadLine();
 
                     //Make the actual breathing Activity desired
-                    BreathingActivity BreathActivity = new BreathingActivity(desiredTime);
-                    BreathActivity.Run();
+                    BreathingActivity breathActivity = new BreathingActivity(desiredTime);
+                    breathActivity.Run();
 
                     //Ending message
-                    BreathActivity.ShowSpinner(4);
+                    breathActivity.ShowSpinner(4);
                     Console.Clear();
-                    BreathActivity.DisplayEndingMessage();
+                    breathActivity.DisplayEndingMessage();
                     break;
 
                 case "2":
-                    Console.Write("\nHow long (in seconds) would you like this activity to last? ");
+                    //temporary class for display use
+                    ReflectingActivity tempReflect = new ReflectingActivity("0");
+                    tempReflect.DisplayStartingMessage();
                     desiredTime = Console.ReadLine();
+
+                    //Make the actual Reflecting Activity desired
+                    ReflectingActivity reflectActivity = new ReflectingActivity(desiredTime);
+                    reflectActivity.Run();
+
+                    //Ending message
+                    reflectActivity.ShowSpinner(4);
+                    Console.Clear();
+                    reflectActivity.DisplayEndingMessage();
                     break;
+                    
                 case "3":
                     Console.Write("\nHow long (in seconds) would you like this activity to last? ");
                     desiredTime = Console.ReadLine();
