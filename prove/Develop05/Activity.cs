@@ -1,7 +1,7 @@
 public class Activity
 {
     //Member variables
-    private int _duration;
+    protected int _duration;
     private string _name;
     private string _description;
 
@@ -66,7 +66,7 @@ public class Activity
         Console.WriteLine($"You completed another {_duration} seconds of the {_name} Activity!");
     }
     public void DisplayStartingMessage(){
-        Console.WriteLine($"Welcome to the {_name} Activity!\n\n{_description}");
+        Console.WriteLine($"\nWelcome to the {_name} Activity!\n\n{_description}");
         Console.Write("\nHow long (in seconds) would you like this activity to last? ");
     }
 }
