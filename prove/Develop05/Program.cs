@@ -31,6 +31,7 @@ class Program
 
                     //Ending message
                     BreathActivity.ShowSpinner(4);
+                    Console.Clear();
                     BreathActivity.DisplayEndingMessage();
                     break;
 

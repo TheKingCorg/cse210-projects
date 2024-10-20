@@ -55,12 +55,9 @@ public class Activity
                 i = 0;
             }
         }
-        //Clear "loading" from console
-        Console.Write("\b\b\b\b\b\b\b\b\b\b\b");
-
     }
     public void DisplayEndingMessage(){
-        Console.WriteLine("\nWell done!!");
+        Console.WriteLine("\n\nWell done!!");
         ShowSpinner(3);
 
         Console.WriteLine($"You completed another {_duration} seconds of the {_name} Activity!");
