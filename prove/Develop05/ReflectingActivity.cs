@@ -8,10 +8,10 @@ public class ReflectingActivity : Activity
     public ReflectingActivity(string duration) : base(duration, "Reflecting",
     "This activity will help you reflect on times in your life when you have shown strength\nand resilience. This will help you recognize the power you have and how you can use it in other\naspects of your life."){
         _prompts = [
-            "Think of a time when you stood up for someone else.",
-            "Think of a time when you did something really difficult.",
-            "Think of a time when you helped someone in need.",
-            "Think of a time when you did something truly selfless."
+            "\nThink of a time when you stood up for someone else.",
+            "\nThink of a time when you did something really difficult.",
+            "\nThink of a time when you helped someone in need.",
+            "\nThink of a time when you did something truly selfless."
         ];
         _questions = [
             "Why was this experience meaningful to you?",
@@ -28,17 +28,6 @@ public class ReflectingActivity : Activity
 
     //Methods
     public void Run(){
-        //instantiate a list of indexes to track used questions
-        List<int> questionIndexes = [];
-        int starterIndex = 0;
-        foreach (string q in _questions){
-            questionIndexes.Add(starterIndex);
-            starterIndex ++;
-        }
-
-        //Get Random
-        Random random = new Random();
-
         //Give user time to think about prompt
         DisplayPrompt();
 
@@ -46,12 +35,8 @@ public class ReflectingActivity : Activity
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(_duration);
         while (DateTime.Now < endTime){
-            //get a random index location from inside the questionIndexes list
-            int randomIndex = random.Next(0, questionIndexes.Count);
-            //Look at the randomly indexed location of questionIndexes and get that question from the question list
-            GetRandomQuestion(questionIndexes[randomIndex]);
-            //Remove that specific question index from questionIndexes using the randomIndex
-            questionIndexes.RemoveAt(randomIndex);
+            DisplayQuestion();
+            ShowSpinner(5);
         }
     }
     public string GetRandomPrompt(){
@@ -59,15 +44,18 @@ public class ReflectingActivity : Activity
         int randomIndex = random.Next(0, _prompts.Count);
         return _prompts[randomIndex];
     }
-    public string GetRandomQuestion(int i){
-        return _questions[i];
+    public string GetRandomQuestion(){
+        Random random = new Random();
+        int randomIndex = random.Next(0, _questions.Count);
+        return _questions[randomIndex];
     }
     public void DisplayPrompt(){
         Console.WriteLine($"\n{GetRandomPrompt()}\nTake your time to think of a good example.");
         Console.Write("The activity will start shortly... ");
-        ShowCountDown(15);
+        ShowCountDown(9);
+        ShowSpinner(3);
     }
-    public void DisplayQuestion(int i){
-        Console.WriteLine($"\n{GetRandomQuestion(i)}");
+    public void DisplayQuestion(){
+        Console.WriteLine($"\n{GetRandomQuestion()}");
     }
 }
