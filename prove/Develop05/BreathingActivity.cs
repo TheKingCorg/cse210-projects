@@ -20,9 +20,9 @@ public class BreathingActivity : Activity
         DateTime endTime = startTime.AddSeconds(_duration);
         while (DateTime.Now < endTime){
             Console.Write("\nBreath in...");
-            ShowCountDown(6);
+            ShowCountDown(5);
             Console.Write("\nBreathe out...");
-            ShowCountDown(4);
+            ShowCountDown(3);
         }
     }
 }

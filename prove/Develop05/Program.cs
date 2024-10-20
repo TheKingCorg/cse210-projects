@@ -10,7 +10,7 @@ class Program
         //Program setup
         Console.Clear();
         Console.WriteLine("Welcome to the Corg&Co mindfulness application!");
-        Thread.Sleep(3000);
+        Thread.Sleep(1500);
 
         while (userChoice != "4"){
             Console.WriteLine(menu);
@@ -52,8 +52,19 @@ class Program
                     break;
                     
                 case "3":
-                    Console.Write("\nHow long (in seconds) would you like this activity to last? ");
+                    //temporary class for display use
+                    ListingActivity tempList = new ListingActivity("0");
+                    tempList.DisplayStartingMessage();
                     desiredTime = Console.ReadLine();
+
+                    //Make the actual Listing Activity desired
+                    ListingActivity listActivity = new ListingActivity(desiredTime);
+                    listActivity.Run();
+
+                    //Ending message
+                    listActivity.ShowSpinner(4);
+                    Console.Clear();
+                    listActivity.DisplayEndingMessage();
                     break;
             }
             
