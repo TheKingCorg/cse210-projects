@@ -4,12 +4,13 @@ public class Square : Shape
     private double _side;
 
     //Constructors
-    public Square() : base(){
-        _side = 0;
+    public Square(string color, double length) : base(color){
+        //handles no arguments passed in
+        _side = length;
     }
 
     //Methods 
     public override double GetArea(){
-        return 0;
+        return (_side * _side);
     }
 }

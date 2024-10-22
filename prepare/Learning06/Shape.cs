@@ -7,7 +7,7 @@ public abstract class Shape
     //Constructors
     public Shape(){
         //handles no arguments
-        _color = "undefined";
+        _color = "NoColor";
     }
     public Shape(string setColor){
         //handles color passed in as an argument
