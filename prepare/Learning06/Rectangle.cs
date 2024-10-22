@@ -5,14 +5,20 @@ public class Rectangle : Shape
     private double _width;
 
     //Constructors
-    public Rectangle() : base(){
-        _length = 0;
-        _width = 0;
+    public Rectangle(double length, double width) : base(){
+        //in case no color arg is declared
+        _length = length;
+        _width = width;
+    }
+    public Rectangle(string color, double length, double width) : base(color){
+        //uses a passed in "color"
+        _length = length;
+        _width = width;
     }
 
     //methods
     public override double GetArea()
     {
-        return 0;
+        return (_length * _width);
     }
 }
