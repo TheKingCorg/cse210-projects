@@ -1,3 +1,5 @@
+using System.Formats.Asn1;
+
 public class Square : Shape
 {
     //Member variables 
@@ -15,6 +17,8 @@ public class Square : Shape
 
     //Methods 
     public override double GetArea(){
-        return (_side * _side);
+        double area = (_side * _side);
+        double shortArea = Math.Round(area, 2);
+        return shortArea;
     }
 }

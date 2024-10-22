@@ -1,3 +1,5 @@
+using System.Formats.Asn1;
+
 public class Rectangle : Shape
 {
     //member variables
@@ -19,6 +21,8 @@ public class Rectangle : Shape
     //methods
     public override double GetArea()
     {
-        return (_length * _width);
+        double area = (_length * _width);
+        double shortArea = Math.Round(area, 2);
+        return shortArea;
     }
 }
