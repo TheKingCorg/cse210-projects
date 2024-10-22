@@ -4,8 +4,12 @@ public class Square : Shape
     private double _side;
 
     //Constructors
+        public Square(double length) : base(){
+        //handles no color argument
+        _side = length;
+    }
     public Square(string color, double length) : base(color){
-        //handles no arguments passed in
+        //handles color argument
         _side = length;
     }
 
