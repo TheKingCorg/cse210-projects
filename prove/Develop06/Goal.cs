@@ -1,9 +1,9 @@
 public abstract class Goal
 {
     //Member variables
-    private string _shortName;
-    private string _description;
-    private string _points;
+    protected string _shortName;
+    protected string _description;
+    protected string _points;
 
     //Constructor
     public Goal(string name, string description, string points)

@@ -11,12 +11,17 @@ public class SimpleGoal : Goal
 
     //Methods
     public override void RecordEvent(){
+        _isComplete = true;
     }
     public override bool IsComplete(){
-        return false;
+        return _isComplete;
     }
     public override string GetStringRepresentation(){
-        return "";
+        if (_isComplete){
+            return ($"{_shortName}\n{_description}         [x]");
+        }else{
+            return ($"{_shortName}\n{_description}         [ ]");
+        }
     }
 
 }
