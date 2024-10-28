@@ -115,8 +115,6 @@ public class GoalManager
         string fileName = Console.ReadLine();
 
         using (StreamWriter outputFile = new StreamWriter(fileName)){
-            //Clear the target file
-            File.WriteAllText(fileName, String.Empty);
             //start file with _score
             outputFile.WriteLine(_score);
 

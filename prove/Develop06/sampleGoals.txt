@@ -1,0 +1,6 @@
+130
+SimpleGoal~trash~take it out~20~True
+SimpleGoal~write essay~for EngLit~30~False
+ChecklistGoal~Prep lunch~for the week~10~7~30~3
+ChecklistGoal~clean sinks~kitchen and bathroom~20~2~20~2
+EternalGoal~Pray~morning and evening~20

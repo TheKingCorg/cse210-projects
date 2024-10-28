@@ -46,9 +46,12 @@ class Program
                     manager.RecordEvent();
                     break;
 
-                default:
-                    //any value other than 1-5 will go back to the top
+                case "6":
                     //if menu choice has been updated to 6, program will quit
+                    break;
+                    
+                default:
+                    //any value other than 1-6 will go back to the top
                     Console.WriteLine("\nEnter a valid selection.");
                     Thread.Sleep(2000);
                     break;

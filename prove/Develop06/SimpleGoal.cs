@@ -11,7 +11,7 @@ public class SimpleGoal : Goal
     public SimpleGoal(string name, string description, string points, string complete) : base(name, description, points)
     {
         //handles passing in the complete bool for reading a file
-        if (complete == "true"){
+        if (complete == "True"){
             _isComplete = true;
         }else{
             _isComplete = false;
