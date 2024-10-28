@@ -20,17 +20,26 @@ class Program
             //Switcher for function execution
             switch (menuChoice){
                 case "1":
+                    //Create new goal
+                    manager.CreateGoal();
                     break;
+
                 case "2":
                     //List goal details
                     manager.ListGoalDetails();
                     break;
+
                 case "3":
                     break;
+
                 case "4":
                     break;
+
                 case "5":
+                    //Record event
+                    manager.RecordEvent();
                     break;
+
                 default:
                     //any value other than 1-5 will go back to the top
                     //if menu choice has been updated to 6, program will quit

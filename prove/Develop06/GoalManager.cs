@@ -40,6 +40,57 @@ public class GoalManager
         }
     }
     public void CreateGoal(){
+        //Present choices for user to pick from
+        Console.WriteLine("\nWhat kind of goal would you like to create?\n  1. Simple Goal\n  2. Checklist Goal\n  3. Eternal Goal");
+        Console.Write("Enter your choice here: ");
+        string userChoice = Console.ReadLine();
+
+        //Depending on the type, gather necessary info and pass it into the constructor
+        switch (userChoice){
+            case "1":
+                //build a simple goal
+                Console.Write("\nEnter your goal's name: ");
+                string name = Console.ReadLine();
+                Console.Write("\nEnter a brief description: ");
+                string description = Console.ReadLine();
+                Console.Write("\nHow many points is it worth: ");
+                string points = Console.ReadLine();
+                _goals.Add(new SimpleGoal(name, description, points));
+                break;
+            
+            case "2":
+                //build a checklist goal
+                Console.Write("\nEnter your goal's name: ");
+                string checkName = Console.ReadLine();
+                Console.Write("\nEnter a brief description: ");
+                string checkDescription = Console.ReadLine();
+                Console.Write("\nHow many points is it worth: ");
+                string checkPoints = Console.ReadLine();
+                Console.Write("\nHow many times should you complete this goal: ");
+                int target = Int32.Parse(Console.ReadLine());
+                Console.Write($"\nHow many bonus points should you earn after completing it {target} times: ");
+                int bonus = Int32.Parse(Console.ReadLine());
+                _goals.Add(new ChecklistGoal(checkName, checkDescription, checkPoints, target, bonus));
+                break;
+            
+            case "3":
+                //build an eternal goal
+                Console.Write("\nEnter your goal's name: ");
+                string eterName = Console.ReadLine();
+                Console.Write("\nEnter a brief description: ");
+                string eterDescription = Console.ReadLine();
+                Console.Write("\nHow many points is it worth: ");
+                string eterPoints = Console.ReadLine();
+                _goals.Add(new SimpleGoal(eterName, eterDescription, eterPoints));
+                break;
+            
+            default:
+                //Display an error
+                Console.Clear();
+                Console.WriteLine("Error: selection invalid");
+                Thread.Sleep(2000);
+                break;
+        }
     }
     public void RecordEvent(){
         //List goals and ask which is to be recorded 
