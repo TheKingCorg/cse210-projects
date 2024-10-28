@@ -10,9 +10,11 @@ public class EternalGoal : Goal
     }
 
     //Methods
-    public override void RecordEvent()
+    public override int RecordEvent()
     {
         _timesComplete += 1;
+        Console.WriteLine($"\nCongratulations, you earned {_points} points!");
+        return Int32.Parse(_points);
     }
     public override bool IsComplete()
     {

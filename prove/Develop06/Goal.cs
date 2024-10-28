@@ -14,7 +14,7 @@ public abstract class Goal
     }
 
     //Methods
-    public abstract void RecordEvent();
+    public abstract int RecordEvent();
     public abstract bool IsComplete();
     public virtual string GetDetailsString(){
         return ($"{_points} {_shortName}:\n    {_description}");

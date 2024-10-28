@@ -42,6 +42,18 @@ public class GoalManager
     public void CreateGoal(){
     }
     public void RecordEvent(){
+        //List goals and ask which is to be recorded 
+        Console.WriteLine("\nWhich goal did you accomplish?");
+        ListGoalNames();
+        Console.Write("Enter your selection here: ");
+        //cast userChoice as an int
+        int userChoice = Int32.Parse(Console.ReadLine());
+
+        //Ensure that the selected goal gets a recorded event
+        int earned = _goals[userChoice-1].RecordEvent();
+        //Add the earned score to total
+        _score += earned;
+
     }
     public void SaveGoals(){
     }

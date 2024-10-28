@@ -14,11 +14,19 @@ public class ChecklistGoal : Goal
     }
 
     //Methods
-    public override void RecordEvent()
+    public override int RecordEvent()
     {
-        if (_amountCompleted < _target){
+        if (_amountCompleted == _target){
+            int earned = (Int32.Parse(_points) + _bonus);
+            Console.WriteLine($"\nCongratulations! You earned {earned} points!");
+            return earned;
+        }else{
             _amountCompleted += 1;
+            int earned = Int32.Parse(_points);
+            Console.WriteLine($"\nCongratulations! You earned {earned} points!");
+            return earned;
         }
+
     }
     public override bool IsComplete()
     {

@@ -10,8 +10,10 @@ public class SimpleGoal : Goal
     }
 
     //Methods
-    public override void RecordEvent(){
+    public override int RecordEvent(){
         _isComplete = true;
+        Console.WriteLine($"\nCongratulations, you earned {_points} points!");
+        return Int32.Parse(_points);
     }
     public override bool IsComplete(){
         return _isComplete;
