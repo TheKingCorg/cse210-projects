@@ -20,9 +20,13 @@ public class SimpleGoal : Goal
 
     //Methods
     public override int RecordEvent(){
-        _isComplete = true;
-        Console.WriteLine($"\nCongratulations, you earned {_points} points!");
-        return Int32.Parse(_points);
+        if (_isComplete == false){
+            _isComplete = true;
+            Console.WriteLine($"\nCongratulations, you earned {_points} points!");
+            return Int32.Parse(_points);
+        }else{
+            return 0;
+        }
     }
     public override bool IsComplete(){
         return _isComplete;

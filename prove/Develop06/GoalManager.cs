@@ -36,6 +36,7 @@ public class GoalManager
     }
     public void ListGoalDetails(){
         //loop through all goals and display their info
+        Console.WriteLine("");
         foreach (Goal indGoal in _goals){
             Console.WriteLine($"{indGoal.GetDetailsString()}");
         }
