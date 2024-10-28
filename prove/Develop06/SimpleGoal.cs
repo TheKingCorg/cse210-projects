@@ -18,9 +18,9 @@ public class SimpleGoal : Goal
     }
     public override string GetStringRepresentation(){
         if (_isComplete){
-            return ($"{_shortName}\n{_description}         [x]");
+            return ($"[x] {GetDetailsString()}");
         }else{
-            return ($"{_shortName}\n{_description}         [ ]");
+            return ($"[ ] {GetDetailsString()}");
         }
     }
 

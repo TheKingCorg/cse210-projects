@@ -2,7 +2,7 @@ public abstract class Goal
 {
     //Member variables
     protected string _shortName;
-    protected string _description;
+    private string _description;
     protected string _points;
 
     //Constructor
@@ -17,7 +17,7 @@ public abstract class Goal
     public abstract void RecordEvent();
     public abstract bool IsComplete();
     public virtual string GetDetailsString(){
-        return "";
+        return ($"{_points} {_shortName}:\n    {_description}");
     }
     public abstract string GetStringRepresentation();
 }
