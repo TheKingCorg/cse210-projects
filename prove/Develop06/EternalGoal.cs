@@ -1,18 +1,18 @@
 public class EternalGoal : Goal
 {
     //Member variables
-    //none
+    private int _timesComplete;
 
     //Constructors
     public EternalGoal (string name, string description, string points) : base (name, description, points)
     {
-        //nothing required here
+        _timesComplete = 0;
     }
 
     //Methods
     public override void RecordEvent()
     {
-        throw new NotImplementedException();
+        _timesComplete += 1;
     }
     public override bool IsComplete()
     {
@@ -20,6 +20,6 @@ public class EternalGoal : Goal
     }
     public override string GetStringRepresentation()
     {
-        throw new NotImplementedException();
+        return ($"[ ] {GetDetailsString()}\nCompleted {_timesComplete} times for {_timesComplete * Int32.Parse(_points)} points.");
     }
 }
