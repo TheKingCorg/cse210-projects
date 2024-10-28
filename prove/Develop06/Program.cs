@@ -27,6 +27,8 @@ class Program
                 case "2":
                     //List goal details
                     manager.ListGoalDetails();
+                    Console.Write("\nHit enter to continue: ");
+                    Console.ReadLine();
                     break;
 
                 case "3":

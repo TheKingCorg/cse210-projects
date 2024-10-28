@@ -126,5 +126,44 @@ public class GoalManager
         }
     }
     public void LoadGoals(){
+        //Gather target file from user
+        Console.Write("\nEnter the name of your source file: ");
+        string filename = Console.ReadLine();
+
+        using (StreamReader reader = new StreamReader(filename))
+        {
+            //Store first line as score
+            _score = Int32.Parse(reader.ReadLine());
+
+            //Read remaining lines into array
+            string[] sourceGoals = File.ReadLines(filename).Skip(1).ToArray();
+
+            //empty goal list
+            _goals = [];
+
+            //Store each goal
+            foreach (string sourceGoal in sourceGoals){
+                //divide each line into parts at ~
+                string[] parts = sourceGoal.Split("~");
+
+                //store goal depending on type
+                switch (parts[0]){
+                    case "SimpleGoal":
+                        //Store parts as a simple goal
+                        _goals.Add(new SimpleGoal(parts[1], parts[2], parts[3], parts[4]));
+                        break;
+
+                    case "EternalGoal":
+                        //Store parts as an eternal goal
+                        _goals.Add(new EternalGoal(parts[1], parts[2], parts[3]));
+                        break;
+
+                    case "ChecklistGoal":
+                        //Store parts as a checklist goal
+                        _goals.Add(new ChecklistGoal(parts[1], parts[2], parts[3], parts[4], parts[5], parts[6]));
+                        break;
+                }
+            }
+        }
     }
 }

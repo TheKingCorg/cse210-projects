@@ -8,6 +8,15 @@ public class SimpleGoal : Goal
     {
         _isComplete = false;
     }
+    public SimpleGoal(string name, string description, string points, string complete) : base(name, description, points)
+    {
+        //handles passing in the complete bool for reading a file
+        if (complete == "true"){
+            _isComplete = true;
+        }else{
+            _isComplete = false;
+        }
+    }
 
     //Methods
     public override int RecordEvent(){

@@ -12,6 +12,13 @@ public class ChecklistGoal : Goal
         _target = target;
         _bonus = bonus;
     }
+    public ChecklistGoal(string name, string description, string points, string target, string bonus, string amountCompleted) : base (name, description, points)
+    {
+        //Handles more arguments for reading from a file
+        _amountCompleted = Int32.Parse(amountCompleted);
+        _target = Int32.Parse(target);
+        _bonus = Int32.Parse(bonus);
+    }
 
     //Methods
     public override int RecordEvent()
@@ -45,6 +52,6 @@ public class ChecklistGoal : Goal
     }
     public override string GetStringRepresentation()
     {
-        return ($"ChecklistGoal~{_shortName}~{_description}~{_points}~{_bonus}~{_target}~{_amountCompleted}");
+        return ($"ChecklistGoal~{_shortName}~{_description}~{_points}~{_target}~{_bonus}~{_amountCompleted}");
     }
 }
