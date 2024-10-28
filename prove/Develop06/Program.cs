@@ -30,9 +30,13 @@ class Program
                     break;
 
                 case "3":
+                    //Save goals to a file
+                    manager.SaveGoals();
                     break;
 
                 case "4":
+                    //Load goals from a file
+                    manager.LoadGoals();
                     break;
 
                 case "5":
@@ -43,6 +47,8 @@ class Program
                 default:
                     //any value other than 1-5 will go back to the top
                     //if menu choice has been updated to 6, program will quit
+                    Console.WriteLine("\nEnter a valid selection.");
+                    Thread.Sleep(2000);
                     break;
             }
         }

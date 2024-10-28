@@ -1,4 +1,5 @@
 using System.Xml.Linq;
+using System.IO;
 
 public class GoalManager
 {
@@ -36,7 +37,7 @@ public class GoalManager
     public void ListGoalDetails(){
         //loop through all goals and display their info
         foreach (Goal indGoal in _goals){
-            Console.WriteLine($"{indGoal.GetStringRepresentation()}");
+            Console.WriteLine($"{indGoal.GetDetailsString()}");
         }
     }
     public void CreateGoal(){
@@ -107,6 +108,22 @@ public class GoalManager
 
     }
     public void SaveGoals(){
+        //Obtain destination file name
+        Console.WriteLine("You can save your file to any .txt file.");
+        Console.Write("\nEnter the name of the file: ");
+        string fileName = Console.ReadLine();
+
+        using (StreamWriter outputFile = new StreamWriter(fileName)){
+            //Clear the target file
+            File.WriteAllText(fileName, String.Empty);
+            //start file with _score
+            outputFile.WriteLine(_score);
+
+            //Write each goal to the file
+            foreach (Goal indGoal in _goals){
+                outputFile.WriteLine(indGoal.GetStringRepresentation());
+            }
+        }
     }
     public void LoadGoals(){
     }
