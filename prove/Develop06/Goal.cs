@@ -20,4 +20,7 @@ public abstract class Goal
         return ($"{_points} {_shortName}:\n    {_description}");
     }
     public abstract string GetStringRepresentation();
+    public string GetNameString(){
+        return _shortName;
+    }
 }

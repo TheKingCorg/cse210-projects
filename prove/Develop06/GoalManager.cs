@@ -25,8 +25,19 @@ public class GoalManager
     public void DisplayPlayerInfo(){
     }
     public void ListGoalNames(){
+        //Show each goal's name
+        int i = 0;
+        foreach (Goal indGoal in _goals){
+            //increment the goal number and print the goal name
+            i++;
+            Console.WriteLine($"{i}. {indGoal.GetNameString()}");
+        }
     }
     public void ListGoalDetails(){
+        //loop through all goals and display their info
+        foreach (Goal indGoal in _goals){
+            Console.WriteLine($"{indGoal.GetStringRepresentation()}");
+        }
     }
     public void CreateGoal(){
     }

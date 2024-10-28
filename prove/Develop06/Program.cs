@@ -22,6 +22,8 @@ class Program
                 case "1":
                     break;
                 case "2":
+                    //List goal details
+                    manager.ListGoalDetails();
                     break;
                 case "3":
                     break;
