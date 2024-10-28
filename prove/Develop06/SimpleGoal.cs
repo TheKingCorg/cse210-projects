@@ -19,11 +19,7 @@ public class SimpleGoal : Goal
         return _isComplete;
     }
     public override string GetStringRepresentation(){
-        if (_isComplete){
-            return ($"[x] {GetDetailsString()}");
-        }else{
-            return ($"[ ] {GetDetailsString()}");
-        }
+        return ($"SimpleGoal~{_shortName}~{_description}~{_points}~{IsComplete()}");
     }
 
 }

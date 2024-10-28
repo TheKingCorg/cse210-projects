@@ -37,14 +37,14 @@ public class ChecklistGoal : Goal
         }
     }
     public override string GetDetailsString(){
-        return ($"{_shortName}: {_description}\n      {_points}ea. {_bonus} bonus");
+        if (IsComplete()){
+            return ($"[x] {_shortName} ({_description}) -- completed {_amountCompleted}/{_target}"); 
+        }else{
+            return ($"[ ] {_shortName} ({_description}) -- completed {_amountCompleted}/{_target}");
+        }
     }
     public override string GetStringRepresentation()
     {
-        if (_amountCompleted == _target){
-            return ($"[{_target}/{_target}] {GetDetailsString()}");
-        }else{
-            return ($"[{_amountCompleted}/{_target}] {GetDetailsString()}");
-        }
+        return ($"ChecklistGoal~{_shortName}~{_description}~{_points}~{_bonus}~{_target}~{_amountCompleted}");
     }
 }

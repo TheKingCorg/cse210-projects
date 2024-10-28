@@ -22,6 +22,6 @@ public class EternalGoal : Goal
     }
     public override string GetStringRepresentation()
     {
-        return ($"[ ] {GetDetailsString()}\nCompleted {_timesComplete} times for {_timesComplete * Int32.Parse(_points)} points.");
+        return ($"EternalGoal~{_shortName}~{_description}~{_points}");
     }
 }

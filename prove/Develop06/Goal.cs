@@ -17,7 +17,11 @@ public abstract class Goal
     public abstract int RecordEvent();
     public abstract bool IsComplete();
     public virtual string GetDetailsString(){
-        return ($"{_points} {_shortName}:\n    {_description}");
+        if (IsComplete()){
+            return ($"[x] {_shortName} ({_description})"); 
+        }else{
+            return ($"[ ] {_shortName} ({_description})");
+        }
     }
     public abstract string GetStringRepresentation();
     public string GetNameString(){
