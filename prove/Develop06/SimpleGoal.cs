@@ -25,6 +25,9 @@ public class SimpleGoal : Goal
             Console.WriteLine($"\nCongratulations, you earned {_points} points!");
             return Int32.Parse(_points);
         }else{
+            Console.WriteLine("Goal is already complete.");
+            Console.Write("Hit 'enter' to continue: ");
+            Console.ReadLine();
             return 0;
         }
     }

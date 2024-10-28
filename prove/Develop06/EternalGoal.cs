@@ -14,6 +14,7 @@ public class EternalGoal : Goal
     {
         _timesComplete += 1;
         Console.WriteLine($"\nCongratulations, you earned {_points} points!");
+        Thread.Sleep(3000);
         return Int32.Parse(_points);
     }
     public override bool IsComplete()

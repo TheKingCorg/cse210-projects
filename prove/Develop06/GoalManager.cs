@@ -83,7 +83,7 @@ public class GoalManager
                 string eterDescription = Console.ReadLine();
                 Console.Write("\nHow many points is it worth: ");
                 string eterPoints = Console.ReadLine();
-                _goals.Add(new SimpleGoal(eterName, eterDescription, eterPoints));
+                _goals.Add(new EternalGoal(eterName, eterDescription, eterPoints));
                 break;
             
             default:
