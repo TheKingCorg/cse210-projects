@@ -16,17 +16,27 @@ public class ChecklistGoal : Goal
     //Methods
     public override void RecordEvent()
     {
-        throw new NotImplementedException();
+        if (_amountCompleted < _target){
+            _amountCompleted += 1;
+        }
     }
     public override bool IsComplete()
     {
-        throw new NotImplementedException();
+        if (_amountCompleted == _target){
+            return true;
+        } else {
+            return false;
+        }
     }
     public override string GetDetailsString(){
-        return "";
+        return ($"{_shortName}: {_description}\n      {_points}ea. {_bonus} bonus");
     }
     public override string GetStringRepresentation()
     {
-        throw new NotImplementedException();
+        if (_amountCompleted == _target){
+            return ($"[{_target}/{_target}] {GetDetailsString()}");
+        }else{
+            return ($"[{_amountCompleted}/{_target}] {GetDetailsString()}");
+        }
     }
 }

@@ -2,7 +2,7 @@ public abstract class Goal
 {
     //Member variables
     protected string _shortName;
-    private string _description;
+    protected string _description;
     protected string _points;
 
     //Constructor
