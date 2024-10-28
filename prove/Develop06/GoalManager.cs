@@ -14,6 +14,13 @@ public class GoalManager
 
     //Methods
     public void Start(){
+        //Clear console and show score
+        Console.Clear();
+        Console.WriteLine($"\nYou have {_score} points.");
+
+        //Display menu and request input
+        Console.WriteLine("\n1. Create New Goal\n2. List Goals\n3. Save Goals\n4. Load Goals\n5. Record Event\n6. Quit");
+        Console.Write("Enter you selection here: ");
     }
     public void DisplayPlayerInfo(){
     }
