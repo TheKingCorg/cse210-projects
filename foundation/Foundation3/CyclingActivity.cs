@@ -13,14 +13,20 @@ public class CyclingActivity : Activity
     //Methods
     public override float GetDistance()
     {
-        throw new NotImplementedException();
+        //return (distance) miles
+        float distance = (_speed * (_duration / 60));
+        return distance;
     }
     public override float GetPace()
     {
-        throw new NotImplementedException();
+        //return (pace) min per mile
+        float distance = GetDistance();
+        float pace = (_duration / distance);
+        return pace;
     }
     public override float GetSpeed()
     {
-        throw new NotImplementedException();
+        //return speed (mph)
+        return _speed;
     }
 }
