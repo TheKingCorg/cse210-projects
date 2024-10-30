@@ -7,6 +7,7 @@ public class RunningActivity : Activity
     public RunningActivity(DateTime date, float duration, float distance) : base(date, duration)
     {
         _distance = distance;
+        _type = "Running";
     }
 
     //Methods

@@ -7,6 +7,7 @@ public class CyclingActivity : Activity
     public CyclingActivity(DateTime date, float duration, float speed) : base(date, duration)
     {
         _speed = speed;
+        _type = "Cycling";
     }
 
     //Methods
