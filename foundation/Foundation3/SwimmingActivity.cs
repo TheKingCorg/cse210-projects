@@ -1,10 +1,10 @@
 public class SwimmingActivity : Activity
 {
     //member variables
-    private int _lapsFinsihed;
+    private float _lapsFinsihed;
 
     //Constructors
-    public SwimmingActivity(DateTime date, float duration, int laps) : base(date, duration)
+    public SwimmingActivity(DateTime date, float duration, float laps) : base(date, duration)
     {
         _lapsFinsihed = laps;
         _type = "Swimming";

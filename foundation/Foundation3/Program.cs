@@ -11,7 +11,7 @@ class Program
         activities.Add(new RunningActivity(DateTime.Now.Date, 12.6F, 1.8F));
 
         //Create swimming activity
-        activities.Add(new SwimmingActivity(DateTime.Now.Date, 30.2F, 6));
+        activities.Add(new SwimmingActivity(DateTime.Now.Date, 30.2F, 6.0F));
 
         //Create cycling activity
         activities.Add(new CyclingActivity(DateTime.Now.Date, 26.7F, 9.8F));
